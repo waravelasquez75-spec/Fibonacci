@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Center</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div class="background-animation"></div>
+
+    <header>
+        <img src="https://www.javeriana.edu.co/pesquisa/wp-content/uploads/2020/11/diabetes-ideas-para-mejorar-la-vida-pacientes-1024x536.jpg"
+            alt="Lumina Diabetes Center" class="hero-img">
+        <div class="header-content">
+            <h1>Diabetes Center</h1>
+            <p class="subtitle">Evaluación Glicémica Inteligente</p>
+            <p class="tagline"> SU DOCTORA/FUTURA INGENIERA: WARA VELASQUEZ</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Contexto del Problema -->
+        <section class="seccion">
+            <h2>Contexto del Problema</h2>
+            <p>La diabetes es una enfermedad crónica que afecta a más de 500 millones de personas en el mundo. En
+                Bolivia, representa un problema de salud pública importante, siendo una de las principales causas de
+                hospitalizaciones, amputaciones, ceguera y enfermedades renales. El control adecuado de los niveles de
+                glucosa en sangre es esencial para prevenir complicaciones graves y mejorar la calidad de vida de los
+                pacientes.</p>
+        </section>
+
+        <!-- Explicación del Algoritmo -->
+        <section class="seccion">
+            <h2>Explicación del Algoritmo</h2>
+            <p>Esta pagina simula el comportamiento de la glucosa en sangre a lo largo del tiempo. A partir de la
+                glucosa inicial ingresada por el usuario, se calcula una evolución hora por hora considerando factores
+                reales como el metabolismo, la ingesta de alimentos y la respuesta corporal. El sistema identifica el
+                punto más alto alcanzado y el nivel final, permitiendo generar recomendaciones personalizadas según el
+                riesgo detectado.</p>
+        </section>
+
+        <!-- Formulario -->
+        <section class="seccion form-section" id="formSection">
+            <h2>Registro de Evaluación Glicémica</h2>
+            <form id="formDiabetes">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Nombre Completo</label>
+                        <input type="text" id="nombre" placeholder="Ej: Camila Andrea López" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Edad (años)</label>
+                        <input type="number" id="edad" min="1" max="100" placeholder="Ej: 45" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Tipo de Diabetes</label>
+                        <select id="tipoDiabetes" required>
+                            <option value="">Seleccione...</option>
+                            <option value="Tipo 1">Tipo 1</option>
+                            <option value="Tipo 2">Tipo 2</option>
+                            <option value="Gestacional">Gestacional</option>
+                            <option value="LADA">LADA</option>
+                            <option value="MODY">MODY</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Tipo de Paciente</label>
+                        <select id="tipoPaciente" required>
+                            <option value="">Seleccione...</option>
+                            <option value="Controlado">Paciente Controlado</option>
+                            <option value="Irregular">Paciente Irregular</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Glucosa Inicial (mg/dL)</label>
+                        <input type="number" id="glucosaInicial" min="40" max="600" placeholder="Ej: 105" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Horas de Monitoreo</label>
+                        <input type="number" id="horas" min="1" max="24" placeholder="Ej: 5">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Peso (kg)</label>
+                        <input type="number" id="peso" min="30" max="250" placeholder="Ej: 68" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Altura (cm)</label>
+                        <input type="number" id="altura" min="100" max="220" placeholder="Ej: 162" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">Ver Mi Análisis Completo</button>
+            </form>
+        </section>
+
+        <!-- Resultados -->
+        <section class="seccion" id="resultadoSection" style="display: none;">
+            <div class="result-header">
+                <h2 id="saludo"></h2>
+                <p id="fechaActual" class="fecha"></p>
+            </div>
+
+            <div id="reporteGeneral" class="reporte"></div>
+
+            <div class="grafico-container">
+                <h3>Evolución de Glucosa (mg/dL)</h3>
+                <div class="grafico" id="graficoBarras"></div>
+            </div>
+
+            <div id="recomendaciones" class="recomendaciones"></div>
+        </section>
+
+        <!-- Conclusión Mejorada -->
+        <section class="seccion">
+            <h2>Conclusión</h2>
+            <p>El monitoreo constante de la glucosa combinado con análisis matemáticos ayuda a las personas con diabetes
+                a tomar mejores decisiones y mejorar su calidad de vida. Esta herramienta es un apoyo educativo y
+                clínico.Pero para mas seguridad acude a un medico</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>Diabetes Center • Wara ISIS</p>
+    </footer>
+
+    <script src="java.js"></script>
+</body>
+
+</html>
